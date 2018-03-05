@@ -1,0 +1,30 @@
+<section class="config-page col center">
+    <div class="box">
+        <header class="title text-center">Créer une partie</header>
+        <form class="form" (ngSubmit)="onSubmit($event)">
+            <div class="players row">
+                <fieldset class="fieldset player" *ngFor="let player of players; let i = index;">
+                    <legend class="legend text-center" [ngStyle]="{'color': player.color}">
+                        {{ player.username }}
+                    </legend>
+
+                    <div class="row">
+                        <label class="label">Pseudo :</label>
+                        <input name="{{'username'+i}}" type="text" class="field" [(ngModel)]="player.username" required/>
+                    </div>
+
+                    <div class="row">
+                        <label class="label">Couleur :</label>
+                        <input name="{{'color'+i}}" type="color" class="field" [(ngModel)]="player.color" required/>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <div class="text-center">
+                <input type="submit" class="btn submit" value="Lancer" />
+            </div>
+        </form>
+
+    </div>
+</section>

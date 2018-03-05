@@ -1,0 +1,32 @@
+.btn {
+    background-color: #fff;
+    min-width: 150px;
+    padding: 10px 20px;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #ec6001;
+    border-color: #ec6001;
+}
+.btn:hover {
+    color: #fff;
+    background-color: #ec6001;
+}
+
+.btn.reverse {
+    color: #fff;
+    background-color: #ec6001;
+}
+.btn.reverse:hover {
+    color: #ec6001;
+    background-color: #fff;
+}
+
+.btn.alert {
+    color: #dc143c;
+    border-color: #dc143c;
+}
+.btn.alert:hover {
+    color: #fff;
+    background-color: #dc143c;
+}

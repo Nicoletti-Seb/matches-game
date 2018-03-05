@@ -1,0 +1,39 @@
+:host {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.config-page {
+    width: 100%;
+    height: 100%;
+}
+
+.config-page .box .title {
+    margin: 20px 0;
+    font-size: 2em;
+    font-weight: bold;
+    color: #ec6001;
+}
+
+.config-page .players {
+    margin: 10px 0;
+}
+
+.config-page .form .player {
+    position: relative;
+}
+
+.config-page .form .player:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: #ec6001;
+}
+
+.config-page .form .player:last-child:after {
+    display: none;
+}

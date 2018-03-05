@@ -1,0 +1,39 @@
+<section class="game-page col">
+    <span class="player-name" [ngStyle]="{'color': currentPlayer.color}">{{ currentPlayer.username }}</span>
+
+    <div class="actions text-center">
+        <button type="button" class="btn alert leave" routerLink="/config">Quitter</button>
+        <button type="button" class="btn reverse play" *ngIf="!isFinished" (click)="onValidateTurn()">Jouer</button>
+        <button type="button" class="btn reverse restart" *ngIf="isFinished" (click)="onClickRestart()">Recommencer</button>
+    </div>
+
+    <div class="text-center" *ngIf="isFinished">
+        <p>Le joueur
+            <span [ngStyle]="{'color': currentPlayer.color}">{{ currentPlayer.username }}</span> a gagné !
+        </p>
+    </div>
+
+    <div class="container-game col">
+        <div class="descriptions row">
+            <p class="description">
+                Nombre d'allumettes: {{matches.length}}
+            </p>
+            <p class="description text-right">
+                Nombre de coups restants: {{numberOfMatchesCanBeSelected}}
+            </p>
+        </div>
+
+        <section class="game box">
+            <ul class="list undecorated row">
+                <li *ngFor="let match of matches; let i = index">
+                    <!-- Match no selected-->
+                    <img class="match" src="/assets/images/match.png " *ngIf="!match" (click)="onClickMatch(i)" />
+
+                    <!-- Match Selected-->
+                    <img class="match selected" src="/assets/images/match-selected.png " *ngIf="match" (click)="onClickMatch(i)" />
+                </li>
+            </ul>
+        </section>
+    </div>
+
+</section>

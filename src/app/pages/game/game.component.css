@@ -1,0 +1,64 @@
+:host {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.game-page,
+.game-page .container-game {
+    width: 100%;
+}
+
+.game-page .actions {
+    margin: 10px 0;
+}
+
+.game-page .container-game {
+    padding: 0 50px;
+    margin: 20px 0;
+}
+
+.game-page .game,
+.game-page .container-game .description {
+    width: 100%;
+}
+
+.game-page .game > .list {
+    flex-wrap: wrap;
+}
+
+.game-page .player-name {
+    margin: 20px 50px;
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+
+.game-page .submit {
+    margin: 20px 5px;
+}
+
+.game-page .match {
+    max-width: 100px;
+    margin: 2px 5px;
+    cursor: pointer;
+}
+
+.game-page .match.selected,
+.game-page .match:hover {
+    background-color: rgba(236, 96, 1, 0.2);
+}
+
+/* Smartphone */
+@media (max-width: 425px) {
+    .game-page .container-game {
+        padding: 0;
+    }
+
+    .game-page .container-game .descriptions {
+        flex-wrap: wrap;
+    }
+
+    .game-page .container-game .description {
+        text-align: center !important;
+    }
+}

@@ -1,0 +1,39 @@
+.form .label {
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+.form .field {
+    width: 100%;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+}
+
+.form .field[type='text'] {
+    padding: 4px 4px 4px 10px;
+}
+
+.form .label,
+.form .field {
+    margin: 0 5px;
+}
+
+.form .fieldset {
+    border: none;
+}
+.form .fieldset > .legend {
+    font-size: 1.2em;
+}
+
+.form .fieldset .label {
+    margin-left: 10px;
+}
+
+.form .fieldset > .row {
+    margin: 10px 5px;
+    vertical-align: middle;
+}
+
+.form .submit {
+    margin: 10px 0;
+}

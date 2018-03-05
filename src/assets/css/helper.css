@@ -1,0 +1,26 @@
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+ul.undecorated {
+    list-style-type: none;
+}
+/* Flex tools */
+.col {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col.center,
+.row.center {
+    align-items: center;
+    justify-content: center;
+}
